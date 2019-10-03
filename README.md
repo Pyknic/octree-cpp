@@ -1,4 +1,22 @@
+# C++ Octree
 Generic implementation of an Octree in C++.
+
+## Usage
+```cpp
+#include "OctreeBranch.h"
+
+struct Color {
+   uint8_t red, green, blue;
+   Color() : red{0}, green{0}, blue{0} {};
+   Color(uint8_t red, uint8_t green, uint8_t blue) :
+      red{red}, green{green}, blue{blue} {}
+};
+
+int main() {
+    OctreeBranch<Color, 128> colorTree{Color{}};
+    colorTree.set(20, 100, 5, Color{255, 0, 0});
+}
+```
 
 ## License
 
