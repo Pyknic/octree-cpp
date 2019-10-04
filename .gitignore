@@ -1,5 +1,6 @@
 # Ignore build files
 build/
+cmake-build-debug/
 
 # Ignore CLion Project Files
 .idea/
