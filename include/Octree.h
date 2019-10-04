@@ -2,12 +2,15 @@
 
 #include <cstdint>
 
-#define OCTREE_MAX_SIZE 256
+#define OCTREE_MAX_SIZE 128
 
 template<typename T>
 class Octree {
-public:
+protected:
     Octree();
+
+public:
+    static Octree<T>* create(const T& value);
 
     virtual ~Octree() = 0;
 

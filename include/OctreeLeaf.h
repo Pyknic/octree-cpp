@@ -10,7 +10,7 @@ public:
 
     ~OctreeLeaf();
 
-    bool isLeafAndEqualTo(const T &value) const override;
+    bool isLeafAndEqualTo(const T &val) const override;
 
     T get(uint8_t x, uint8_t y, uint8_t z) const override;
 
