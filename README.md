@@ -3,7 +3,7 @@ Generic implementation of an Octree in C++.
 
 ## Usage
 ```cpp
-#include "OctreeBranch.h"
+#include "Octree.h"
 
 struct Color {
    uint8_t red, green, blue;
@@ -13,7 +13,7 @@ struct Color {
 };
 
 int main() {
-    OctreeBranch<Color, 128> colorTree{Color{}};
+    auto* colorTree { Octree<Color>::create(Color{}) };
     colorTree.set(20, 100, 5, Color{255, 0, 0});
 }
 ```
