@@ -3,22 +3,21 @@
 #include <cstdint>
 #include "Octree.h"
 
-template <typename T, uint8_t SIZE>
-class OctreeNode : public Octree<T>
-{
+template<typename T, uint8_t SIZE>
+class OctreeNode : public Octree<T> {
 public:
-	OctreeNode(const T& value);
+    explicit OctreeNode(const T &value);
 
-	~OctreeNode();
+    ~OctreeNode();
 
-	bool isLeafAndEqualTo(const T& value) const override;
+    bool isLeafAndEqualTo(const T &value) const override;
 
-	T get(uint8_t x, uint8_t y, uint8_t z) const override;
+    T get(uint8_t x, uint8_t y, uint8_t z) const override;
 
-	Octree<T>* set(uint8_t x, uint8_t y, uint8_t z, const T& value) override;
+    Octree<T> *set(uint8_t x, uint8_t y, uint8_t z, const T &value) override;
 
 private:
-	const T value;
+    const T value;
 };
 
 template<typename T> class OctreeNode<T, 0>;
