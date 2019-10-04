@@ -1,4 +1,5 @@
 # Ignore build files
+lib/
 build/
 cmake-build-debug/
 
